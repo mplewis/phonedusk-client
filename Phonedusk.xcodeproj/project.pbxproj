@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D185D1A0E9E8400334F09 /* AppDelegate.swift */; };
-		369D18601A0E9E8400334F09 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D185F1A0E9E8400334F09 /* FirstViewController.swift */; };
-		369D18621A0E9E8400334F09 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18611A0E9E8400334F09 /* SecondViewController.swift */; };
 		369D18651A0E9E8400334F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369D18631A0E9E8400334F09 /* Main.storyboard */; };
 		369D18671A0E9E8400334F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369D18661A0E9E8400334F09 /* Images.xcassets */; };
 		369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369D18681A0E9E8400334F09 /* LaunchScreen.xib */; };
 		369D18761A0E9E8400334F09 /* PhoneduskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18751A0E9E8400334F09 /* PhoneduskTests.swift */; };
+		369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D187F1A0EA02900334F09 /* PhoneViewController.swift */; };
+		369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18811A0EA02F00334F09 /* SettingsViewController.swift */; };
+		369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D188F1A0EA34100334F09 /* libcrypto.a */; };
+		369D18931A0EA34200334F09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18901A0EA34100334F09 /* libssl.a */; };
+		369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18911A0EA34100334F09 /* libTwilioClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +33,24 @@
 		369D18581A0E9E8400334F09 /* Phonedusk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonedusk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369D185C1A0E9E8400334F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369D185D1A0E9E8400334F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		369D185F1A0E9E8400334F09 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		369D18611A0E9E8400334F09 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		369D18641A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		369D18661A0E9E8400334F09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		369D18691A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		369D186F1A0E9E8400334F09 /* PhoneduskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneduskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		369D18741A0E9E8400334F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369D18751A0E9E8400334F09 /* PhoneduskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneduskTests.swift; sourceTree = "<group>"; };
+		369D187F1A0EA02900334F09 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		369D18811A0EA02F00334F09 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		369D18891A0EA32D00334F09 /* TCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
+		369D188A1A0EA32D00334F09 /* TCConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnectionDelegate.h; sourceTree = "<group>"; };
+		369D188B1A0EA32D00334F09 /* TCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDevice.h; sourceTree = "<group>"; };
+		369D188C1A0EA32D00334F09 /* TCDeviceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDeviceDelegate.h; sourceTree = "<group>"; };
+		369D188D1A0EA32D00334F09 /* TCPresenceEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPresenceEvent.h; sourceTree = "<group>"; };
+		369D188E1A0EA32D00334F09 /* TwilioClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioClient.h; sourceTree = "<group>"; };
+		369D188F1A0EA34100334F09 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		369D18901A0EA34100334F09 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		369D18911A0EA34100334F09 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
+		369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phonedusk-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369D18931A0EA34200334F09 /* libssl.a in Frameworks */,
+				369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */,
+				369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +95,12 @@
 		369D185A1A0E9E8400334F09 /* Phonedusk */ = {
 			isa = PBXGroup;
 			children = (
-				369D185D1A0E9E8400334F09 /* AppDelegate.swift */,
-				369D185F1A0E9E8400334F09 /* FirstViewController.swift */,
-				369D18611A0E9E8400334F09 /* SecondViewController.swift */,
-				369D18631A0E9E8400334F09 /* Main.storyboard */,
-				369D18661A0E9E8400334F09 /* Images.xcassets */,
-				369D18681A0E9E8400334F09 /* LaunchScreen.xib */,
+				369D18841A0EA04000334F09 /* App Delegate */,
+				369D18861A0EA04700334F09 /* Models */,
+				369D18851A0EA04500334F09 /* Views */,
+				369D18831A0EA03300334F09 /* Controllers */,
+				369D18951A0EA35100334F09 /* Resources */,
+				369D18871A0EA31D00334F09 /* Vendor */,
 				369D185B1A0E9E8400334F09 /* Supporting Files */,
 			);
 			path = Phonedusk;
@@ -113,6 +129,72 @@
 				369D18741A0E9E8400334F09 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		369D18831A0EA03300334F09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				369D187F1A0EA02900334F09 /* PhoneViewController.swift */,
+				369D18811A0EA02F00334F09 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		369D18841A0EA04000334F09 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				369D185D1A0E9E8400334F09 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		369D18851A0EA04500334F09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				369D18681A0E9E8400334F09 /* LaunchScreen.xib */,
+				369D18631A0E9E8400334F09 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		369D18861A0EA04700334F09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		369D18871A0EA31D00334F09 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				369D18881A0EA32000334F09 /* Twilio */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		369D18881A0EA32000334F09 /* Twilio */ = {
+			isa = PBXGroup;
+			children = (
+				369D18891A0EA32D00334F09 /* TCConnection.h */,
+				369D188A1A0EA32D00334F09 /* TCConnectionDelegate.h */,
+				369D188B1A0EA32D00334F09 /* TCDevice.h */,
+				369D188C1A0EA32D00334F09 /* TCDeviceDelegate.h */,
+				369D188D1A0EA32D00334F09 /* TCPresenceEvent.h */,
+				369D188E1A0EA32D00334F09 /* TwilioClient.h */,
+				369D188F1A0EA34100334F09 /* libcrypto.a */,
+				369D18901A0EA34100334F09 /* libssl.a */,
+				369D18911A0EA34100334F09 /* libTwilioClient.a */,
+			);
+			name = Twilio;
+			sourceTree = "<group>";
+		};
+		369D18951A0EA35100334F09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				369D18661A0E9E8400334F09 /* Images.xcassets */,
+				369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369D18621A0E9E8400334F09 /* SecondViewController.swift in Sources */,
 				369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */,
-				369D18601A0E9E8400334F09 /* FirstViewController.swift in Sources */,
+				369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */,
+				369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +424,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Phonedusk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Phonedusk",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Phonedusk-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -352,7 +439,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Phonedusk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Phonedusk",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Phonedusk-Bridging-Header.h";
 			};
 			name = Release;
 		};
