@@ -9,6 +9,13 @@
 #ifndef Phonedusk_Phonedusk_Bridging_Header_h
 #define Phonedusk_Phonedusk_Bridging_Header_h
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 #import "TwilioClient.h"
+#import "APAddressBook.h"
+#import "APContact.h"
+#import "APAddress.h"
+#import "APPhoneWithLabel.h"
 
 #endif

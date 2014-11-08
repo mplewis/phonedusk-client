@@ -17,6 +17,32 @@
 		369D18931A0EA34200334F09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18901A0EA34100334F09 /* libssl.a */; };
 		369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18911A0EA34100334F09 /* libTwilioClient.a */; };
 		369D1AD11A0EBBD300334F09 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 369D1ACD1A0EBBB600334F09 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36A491D51A0ECE7600C2942B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D31A0ECE7600C2942B /* AddressBook.framework */; };
+		36A491D61A0ECE7600C2942B /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D41A0ECE7600C2942B /* AddressBookUI.framework */; };
+		36A491DC1A0ECFE500C2942B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D81A0ECFE500C2942B /* AudioToolbox.framework */; };
+		36A491DD1A0ECFE500C2942B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D91A0ECFE500C2942B /* AVFoundation.framework */; };
+		36A491DE1A0ECFE500C2942B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491DA1A0ECFE500C2942B /* CFNetwork.framework */; };
+		36A491DF1A0ECFE500C2942B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491DB1A0ECFE500C2942B /* SystemConfiguration.framework */; };
+		36A491F01A0ED03000C2942B /* disconnect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E11A0ED03000C2942B /* disconnect.wav */; };
+		36A491F11A0ED03000C2942B /* dtmf_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E21A0ED03000C2942B /* dtmf_0.wav */; };
+		36A491F21A0ED03000C2942B /* dtmf_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E31A0ED03000C2942B /* dtmf_1.wav */; };
+		36A491F31A0ED03000C2942B /* dtmf_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E41A0ED03000C2942B /* dtmf_2.wav */; };
+		36A491F41A0ED03000C2942B /* dtmf_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E51A0ED03000C2942B /* dtmf_3.wav */; };
+		36A491F51A0ED03000C2942B /* dtmf_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E61A0ED03000C2942B /* dtmf_4.wav */; };
+		36A491F61A0ED03000C2942B /* dtmf_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E71A0ED03000C2942B /* dtmf_5.wav */; };
+		36A491F71A0ED03000C2942B /* dtmf_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E81A0ED03000C2942B /* dtmf_6.wav */; };
+		36A491F81A0ED03000C2942B /* dtmf_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491E91A0ED03000C2942B /* dtmf_7.wav */; };
+		36A491F91A0ED03000C2942B /* dtmf_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491EA1A0ED03000C2942B /* dtmf_8.wav */; };
+		36A491FA1A0ED03000C2942B /* dtmf_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491EB1A0ED03000C2942B /* dtmf_9.wav */; };
+		36A491FB1A0ED03000C2942B /* dtmf_hash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491EC1A0ED03000C2942B /* dtmf_hash.wav */; };
+		36A491FC1A0ED03000C2942B /* dtmf_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491ED1A0ED03000C2942B /* dtmf_star.wav */; };
+		36A491FD1A0ED03000C2942B /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491EE1A0ED03000C2942B /* incoming.wav */; };
+		36A491FE1A0ED03000C2942B /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 36A491EF1A0ED03000C2942B /* outgoing.wav */; };
+		36A4920E1A0ED81100C2942B /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492021A0ED81100C2942B /* APAddress.m */; };
+		36A4920F1A0ED81100C2942B /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492041A0ED81100C2942B /* APAddressBook.m */; };
+		36A492101A0ED81100C2942B /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492061A0ED81100C2942B /* APContact.m */; };
+		36A492111A0ED81100C2942B /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492081A0ED81100C2942B /* APPhoneWithLabel.m */; };
+		36A492121A0ED81100C2942B /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4920A1A0ED81100C2942B /* APSocialProfile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +103,39 @@
 		369D18911A0EA34100334F09 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
 		369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phonedusk-Bridging-Header.h"; sourceTree = "<group>"; };
 		369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		36A491D31A0ECE7600C2942B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		36A491D41A0ECE7600C2942B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		36A491D81A0ECFE500C2942B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		36A491D91A0ECFE500C2942B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		36A491DA1A0ECFE500C2942B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		36A491DB1A0ECFE500C2942B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		36A491E11A0ED03000C2942B /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disconnect.wav; sourceTree = "<group>"; };
+		36A491E21A0ED03000C2942B /* dtmf_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_0.wav; sourceTree = "<group>"; };
+		36A491E31A0ED03000C2942B /* dtmf_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_1.wav; sourceTree = "<group>"; };
+		36A491E41A0ED03000C2942B /* dtmf_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_2.wav; sourceTree = "<group>"; };
+		36A491E51A0ED03000C2942B /* dtmf_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_3.wav; sourceTree = "<group>"; };
+		36A491E61A0ED03000C2942B /* dtmf_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_4.wav; sourceTree = "<group>"; };
+		36A491E71A0ED03000C2942B /* dtmf_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_5.wav; sourceTree = "<group>"; };
+		36A491E81A0ED03000C2942B /* dtmf_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_6.wav; sourceTree = "<group>"; };
+		36A491E91A0ED03000C2942B /* dtmf_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_7.wav; sourceTree = "<group>"; };
+		36A491EA1A0ED03000C2942B /* dtmf_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_8.wav; sourceTree = "<group>"; };
+		36A491EB1A0ED03000C2942B /* dtmf_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_9.wav; sourceTree = "<group>"; };
+		36A491EC1A0ED03000C2942B /* dtmf_hash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_hash.wav; sourceTree = "<group>"; };
+		36A491ED1A0ED03000C2942B /* dtmf_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_star.wav; sourceTree = "<group>"; };
+		36A491EE1A0ED03000C2942B /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
+		36A491EF1A0ED03000C2942B /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
+		36A492011A0ED81100C2942B /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddress.h; sourceTree = "<group>"; };
+		36A492021A0ED81100C2942B /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddress.m; sourceTree = "<group>"; };
+		36A492031A0ED81100C2942B /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APAddressBook.h; sourceTree = "<group>"; };
+		36A492041A0ED81100C2942B /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAddressBook.m; sourceTree = "<group>"; };
+		36A492051A0ED81100C2942B /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APContact.h; sourceTree = "<group>"; };
+		36A492061A0ED81100C2942B /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APContact.m; sourceTree = "<group>"; };
+		36A492071A0ED81100C2942B /* APPhoneWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPhoneWithLabel.h; sourceTree = "<group>"; };
+		36A492081A0ED81100C2942B /* APPhoneWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPhoneWithLabel.m; sourceTree = "<group>"; };
+		36A492091A0ED81100C2942B /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSocialProfile.h; sourceTree = "<group>"; };
+		36A4920A1A0ED81100C2942B /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSocialProfile.m; sourceTree = "<group>"; };
+		36A4920B1A0ED81100C2942B /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APTypes.h; sourceTree = "<group>"; };
+		36A4920D1A0ED81100C2942B /* APAddressBook-Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APAddressBook-Bridging.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +143,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A491DC1A0ECFE500C2942B /* AudioToolbox.framework in Frameworks */,
+				36A491DD1A0ECFE500C2942B /* AVFoundation.framework in Frameworks */,
+				36A491DE1A0ECFE500C2942B /* CFNetwork.framework in Frameworks */,
+				36A491DF1A0ECFE500C2942B /* SystemConfiguration.framework in Frameworks */,
+				36A491D51A0ECE7600C2942B /* AddressBook.framework in Frameworks */,
+				36A491D61A0ECE7600C2942B /* AddressBookUI.framework in Frameworks */,
 				369D18931A0EA34200334F09 /* libssl.a in Frameworks */,
 				369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */,
 				369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */,
@@ -96,6 +161,10 @@
 		369D184F1A0E9E8400334F09 = {
 			isa = PBXGroup;
 			children = (
+				36A491D81A0ECFE500C2942B /* AudioToolbox.framework */,
+				36A491D91A0ECFE500C2942B /* AVFoundation.framework */,
+				36A491DA1A0ECFE500C2942B /* CFNetwork.framework */,
+				36A491DB1A0ECFE500C2942B /* SystemConfiguration.framework */,
 				369D185A1A0E9E8400334F09 /* Phonedusk */,
 				369D18591A0E9E8400334F09 /* Products */,
 				369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */,
@@ -120,6 +189,7 @@
 				369D18951A0EA35100334F09 /* Resources */,
 				369D18871A0EA31D00334F09 /* Vendor */,
 				369D185B1A0E9E8400334F09 /* Supporting Files */,
+				36A491D71A0ECE7F00C2942B /* Frameworks */,
 			);
 			path = Phonedusk;
 			sourceTree = "<group>";
@@ -168,6 +238,7 @@
 		369D18871A0EA31D00334F09 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				36A491FF1A0ED81100C2942B /* APAddressBook */,
 				369D18881A0EA32000334F09 /* Twilio */,
 			);
 			path = Vendor;
@@ -176,6 +247,7 @@
 		369D18881A0EA32000334F09 /* Twilio */ = {
 			isa = PBXGroup;
 			children = (
+				36A491E01A0ED03000C2942B /* Resources */,
 				369D18891A0EA32D00334F09 /* TCConnection.h */,
 				369D188A1A0EA32D00334F09 /* TCConnectionDelegate.h */,
 				369D188B1A0EA32D00334F09 /* TCDevice.h */,
@@ -205,6 +277,72 @@
 				369D1ACF1A0EBBB600334F09 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		36A491D71A0ECE7F00C2942B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36A491D31A0ECE7600C2942B /* AddressBook.framework */,
+				36A491D41A0ECE7600C2942B /* AddressBookUI.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		36A491E01A0ED03000C2942B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36A491E11A0ED03000C2942B /* disconnect.wav */,
+				36A491E21A0ED03000C2942B /* dtmf_0.wav */,
+				36A491E31A0ED03000C2942B /* dtmf_1.wav */,
+				36A491E41A0ED03000C2942B /* dtmf_2.wav */,
+				36A491E51A0ED03000C2942B /* dtmf_3.wav */,
+				36A491E61A0ED03000C2942B /* dtmf_4.wav */,
+				36A491E71A0ED03000C2942B /* dtmf_5.wav */,
+				36A491E81A0ED03000C2942B /* dtmf_6.wav */,
+				36A491E91A0ED03000C2942B /* dtmf_7.wav */,
+				36A491EA1A0ED03000C2942B /* dtmf_8.wav */,
+				36A491EB1A0ED03000C2942B /* dtmf_9.wav */,
+				36A491EC1A0ED03000C2942B /* dtmf_hash.wav */,
+				36A491ED1A0ED03000C2942B /* dtmf_star.wav */,
+				36A491EE1A0ED03000C2942B /* incoming.wav */,
+				36A491EF1A0ED03000C2942B /* outgoing.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36A491FF1A0ED81100C2942B /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				36A492001A0ED81100C2942B /* Core */,
+				36A4920C1A0ED81100C2942B /* Swift */,
+			);
+			path = APAddressBook;
+			sourceTree = "<group>";
+		};
+		36A492001A0ED81100C2942B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				36A492011A0ED81100C2942B /* APAddress.h */,
+				36A492021A0ED81100C2942B /* APAddress.m */,
+				36A492031A0ED81100C2942B /* APAddressBook.h */,
+				36A492041A0ED81100C2942B /* APAddressBook.m */,
+				36A492051A0ED81100C2942B /* APContact.h */,
+				36A492061A0ED81100C2942B /* APContact.m */,
+				36A492071A0ED81100C2942B /* APPhoneWithLabel.h */,
+				36A492081A0ED81100C2942B /* APPhoneWithLabel.m */,
+				36A492091A0ED81100C2942B /* APSocialProfile.h */,
+				36A4920A1A0ED81100C2942B /* APSocialProfile.m */,
+				36A4920B1A0ED81100C2942B /* APTypes.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		36A4920C1A0ED81100C2942B /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				36A4920D1A0ED81100C2942B /* APAddressBook-Bridging.h */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +378,11 @@
 				TargetAttributes = {
 					369D18571A0E9E8400334F09 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -289,9 +432,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A491F01A0ED03000C2942B /* disconnect.wav in Resources */,
+				36A491F71A0ED03000C2942B /* dtmf_6.wav in Resources */,
 				369D18651A0E9E8400334F09 /* Main.storyboard in Resources */,
+				36A491F11A0ED03000C2942B /* dtmf_0.wav in Resources */,
+				36A491F91A0ED03000C2942B /* dtmf_8.wav in Resources */,
+				36A491F41A0ED03000C2942B /* dtmf_3.wav in Resources */,
 				369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */,
+				36A491FB1A0ED03000C2942B /* dtmf_hash.wav in Resources */,
+				36A491F51A0ED03000C2942B /* dtmf_4.wav in Resources */,
 				369D18671A0E9E8400334F09 /* Images.xcassets in Resources */,
+				36A491F61A0ED03000C2942B /* dtmf_5.wav in Resources */,
+				36A491F21A0ED03000C2942B /* dtmf_1.wav in Resources */,
+				36A491F31A0ED03000C2942B /* dtmf_2.wav in Resources */,
+				36A491FC1A0ED03000C2942B /* dtmf_star.wav in Resources */,
+				36A491FE1A0ED03000C2942B /* outgoing.wav in Resources */,
+				36A491F81A0ED03000C2942B /* dtmf_7.wav in Resources */,
+				36A491FD1A0ED03000C2942B /* incoming.wav in Resources */,
+				36A491FA1A0ED03000C2942B /* dtmf_9.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +461,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */,
+				36A492121A0ED81100C2942B /* APSocialProfile.m in Sources */,
+				36A4920F1A0ED81100C2942B /* APAddressBook.m in Sources */,
+				36A4920E1A0ED81100C2942B /* APAddress.m in Sources */,
+				36A492101A0ED81100C2942B /* APContact.m in Sources */,
 				369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */,
+				36A492111A0ED81100C2942B /* APPhoneWithLabel.m in Sources */,
 				369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,10 +586,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Phonedusk",
+					"$(PROJECT_DIR)/Phonedusk/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Phonedusk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Resources/Phonedusk-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -438,10 +601,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Phonedusk",
+					"$(PROJECT_DIR)/Phonedusk/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Phonedusk-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Resources/Phonedusk-Bridging-Header.h";
 			};
 			name = Release;
 		};
