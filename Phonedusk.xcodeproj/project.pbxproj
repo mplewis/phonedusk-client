@@ -161,10 +161,6 @@
 		369D184F1A0E9E8400334F09 = {
 			isa = PBXGroup;
 			children = (
-				36A491D81A0ECFE500C2942B /* AudioToolbox.framework */,
-				36A491D91A0ECFE500C2942B /* AVFoundation.framework */,
-				36A491DA1A0ECFE500C2942B /* CFNetwork.framework */,
-				36A491DB1A0ECFE500C2942B /* SystemConfiguration.framework */,
 				369D185A1A0E9E8400334F09 /* Phonedusk */,
 				369D18591A0E9E8400334F09 /* Products */,
 				369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */,
@@ -282,6 +278,10 @@
 		36A491D71A0ECE7F00C2942B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36A491D81A0ECFE500C2942B /* AudioToolbox.framework */,
+				36A491D91A0ECFE500C2942B /* AVFoundation.framework */,
+				36A491DA1A0ECFE500C2942B /* CFNetwork.framework */,
+				36A491DB1A0ECFE500C2942B /* SystemConfiguration.framework */,
 				36A491D31A0ECE7600C2942B /* AddressBook.framework */,
 				36A491D41A0ECE7600C2942B /* AddressBookUI.framework */,
 			);
