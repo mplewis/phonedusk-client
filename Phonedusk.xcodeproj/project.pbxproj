@@ -11,23 +11,51 @@
 		369D18651A0E9E8400334F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369D18631A0E9E8400334F09 /* Main.storyboard */; };
 		369D18671A0E9E8400334F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369D18661A0E9E8400334F09 /* Images.xcassets */; };
 		369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369D18681A0E9E8400334F09 /* LaunchScreen.xib */; };
-		369D18761A0E9E8400334F09 /* PhoneduskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18751A0E9E8400334F09 /* PhoneduskTests.swift */; };
 		369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D187F1A0EA02900334F09 /* PhoneViewController.swift */; };
 		369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18811A0EA02F00334F09 /* SettingsViewController.swift */; };
 		369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D188F1A0EA34100334F09 /* libcrypto.a */; };
 		369D18931A0EA34200334F09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18901A0EA34100334F09 /* libssl.a */; };
 		369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18911A0EA34100334F09 /* libTwilioClient.a */; };
+		369D1AD11A0EBBD300334F09 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 369D1ACD1A0EBBB600334F09 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		369D18701A0E9E8400334F09 /* PBXContainerItemProxy */ = {
+		369D1ACC1A0EBBB600334F09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 369D18501A0E9E8400334F09 /* Project object */;
+			containerPortal = 369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		369D1ACE1A0EBBB600334F09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		369D1AD21A0EBBDA00334F09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 369D18571A0E9E8400334F09;
-			remoteInfo = Phonedusk;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		369D1AD01A0EBBC500334F09 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				369D1AD11A0EBBD300334F09 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		369D18581A0E9E8400334F09 /* Phonedusk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonedusk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,9 +64,6 @@
 		369D18641A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		369D18661A0E9E8400334F09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		369D18691A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		369D186F1A0E9E8400334F09 /* PhoneduskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneduskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		369D18741A0E9E8400334F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		369D18751A0E9E8400334F09 /* PhoneduskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneduskTests.swift; sourceTree = "<group>"; };
 		369D187F1A0EA02900334F09 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		369D18811A0EA02F00334F09 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		369D18891A0EA32D00334F09 /* TCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
@@ -51,6 +76,7 @@
 		369D18901A0EA34100334F09 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		369D18911A0EA34100334F09 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
 		369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phonedusk-Bridging-Header.h"; sourceTree = "<group>"; };
+		369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +90,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		369D186C1A0E9E8400334F09 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				369D185A1A0E9E8400334F09 /* Phonedusk */,
-				369D18721A0E9E8400334F09 /* PhoneduskTests */,
 				369D18591A0E9E8400334F09 /* Products */,
+				369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				369D18581A0E9E8400334F09 /* Phonedusk.app */,
-				369D186F1A0E9E8400334F09 /* PhoneduskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,23 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				369D185C1A0E9E8400334F09 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		369D18721A0E9E8400334F09 /* PhoneduskTests */ = {
-			isa = PBXGroup;
-			children = (
-				369D18751A0E9E8400334F09 /* PhoneduskTests.swift */,
-				369D18731A0E9E8400334F09 /* Supporting Files */,
-			);
-			path = PhoneduskTests;
-			sourceTree = "<group>";
-		};
-		369D18731A0E9E8400334F09 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				369D18741A0E9E8400334F09 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +198,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		369D1AC81A0EBBB600334F09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				369D1ACD1A0EBBB600334F09 /* Alamofire.framework */,
+				369D1ACF1A0EBBB600334F09 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,33 +217,17 @@
 				369D18541A0E9E8400334F09 /* Sources */,
 				369D18551A0E9E8400334F09 /* Frameworks */,
 				369D18561A0E9E8400334F09 /* Resources */,
+				369D1AD01A0EBBC500334F09 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				369D1AD31A0EBBDA00334F09 /* PBXTargetDependency */,
 			);
 			name = Phonedusk;
 			productName = Phonedusk;
 			productReference = 369D18581A0E9E8400334F09 /* Phonedusk.app */;
 			productType = "com.apple.product-type.application";
-		};
-		369D186E1A0E9E8400334F09 /* PhoneduskTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 369D187C1A0E9E8400334F09 /* Build configuration list for PBXNativeTarget "PhoneduskTests" */;
-			buildPhases = (
-				369D186B1A0E9E8400334F09 /* Sources */,
-				369D186C1A0E9E8400334F09 /* Frameworks */,
-				369D186D1A0E9E8400334F09 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				369D18711A0E9E8400334F09 /* PBXTargetDependency */,
-			);
-			name = PhoneduskTests;
-			productName = PhoneduskTests;
-			productReference = 369D186F1A0E9E8400334F09 /* PhoneduskTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,10 +240,6 @@
 				TargetAttributes = {
 					369D18571A0E9E8400334F09 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					369D186E1A0E9E8400334F09 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 369D18571A0E9E8400334F09;
 					};
 				};
 			};
@@ -264,13 +254,35 @@
 			mainGroup = 369D184F1A0E9E8400334F09;
 			productRefGroup = 369D18591A0E9E8400334F09 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 369D1AC81A0EBBB600334F09 /* Products */;
+					ProjectRef = 369D1AC71A0EBBB600334F09 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				369D18571A0E9E8400334F09 /* Phonedusk */,
-				369D186E1A0E9E8400334F09 /* PhoneduskTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		369D1ACD1A0EBBB600334F09 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 369D1ACC1A0EBBB600334F09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		369D1ACF1A0EBBB600334F09 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 369D1ACE1A0EBBB600334F09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		369D18561A0E9E8400334F09 /* Resources */ = {
@@ -280,13 +292,6 @@
 				369D18651A0E9E8400334F09 /* Main.storyboard in Resources */,
 				369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */,
 				369D18671A0E9E8400334F09 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		369D186D1A0E9E8400334F09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,21 +308,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		369D186B1A0E9E8400334F09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				369D18761A0E9E8400334F09 /* PhoneduskTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		369D18711A0E9E8400334F09 /* PBXTargetDependency */ = {
+		369D1AD31A0EBBDA00334F09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 369D18571A0E9E8400334F09 /* Phonedusk */;
-			targetProxy = 369D18701A0E9E8400334F09 /* PBXContainerItemProxy */;
+			name = Alamofire;
+			targetProxy = 369D1AD21A0EBBDA00334F09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,40 +445,6 @@
 			};
 			name = Release;
 		};
-		369D187D1A0E9E8400334F09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PhoneduskTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phonedusk.app/Phonedusk";
-			};
-			name = Debug;
-		};
-		369D187E1A0E9E8400334F09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PhoneduskTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phonedusk.app/Phonedusk";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,14 +464,7 @@
 				369D187B1A0E9E8400334F09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		369D187C1A0E9E8400334F09 /* Build configuration list for PBXNativeTarget "PhoneduskTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				369D187D1A0E9E8400334F09 /* Debug */,
-				369D187E1A0E9E8400334F09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
