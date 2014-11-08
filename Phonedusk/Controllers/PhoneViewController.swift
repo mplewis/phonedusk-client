@@ -28,6 +28,24 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
     func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson personRef: ABRecord!) {
         let person = APContact(recordRef: personRef, fieldMask: .Default)
         println("\(person.lastName), \(person.firstName): \(person.phones)")
+
+        let alertController = UIAlertController(title: nil, message: "Calling \(person.firstName) \(person.lastName)", preferredStyle: .ActionSheet)
+
+        for phoneRaw in person.phones {
+            if let phone = phoneRaw as? String {
+                let phoneAction = UIAlertAction(title: phone, style: .Default, handler: { (_) in } )
+                alertController.addAction(phoneAction)
+            } else {
+                println(phoneRaw)
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
+        alertController.addAction(cancelAction)
+
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
     }
 
 }
