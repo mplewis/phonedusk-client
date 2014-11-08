@@ -29,11 +29,26 @@
                                     <action selector="selectContact" destination="9pv-A4-QxB" eventType="touchUpInside" id="cmS-Jo-6Xe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKY-Hb-kfg">
+                                <rect key="frame" x="270" y="66" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="Gtl-Md-8dJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="awO-3f-PIJ"/>
+                                </constraints>
+                                <state key="normal" title="Hang Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hangUp" destination="9pv-A4-QxB" eventType="touchUpInside" id="dw8-rE-Tuc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Cuy-JP-yiF" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="L36-Et-iyU"/>
+                            <constraint firstItem="pKY-Hb-kfg" firstAttribute="top" secondItem="Cuy-JP-yiF" secondAttribute="bottom" constant="8" id="Std-i4-181"/>
                             <constraint firstAttribute="centerX" secondItem="Cuy-JP-yiF" secondAttribute="centerX" id="TMw-ZT-3mp"/>
+                            <constraint firstAttribute="centerX" secondItem="pKY-Hb-kfg" secondAttribute="centerX" id="XJg-pM-mxt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Phone" image="first" id="acW-dT-cKf"/>

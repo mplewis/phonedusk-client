@@ -24,8 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
     
     // MARK: - TCDeviceDelegate methods
     
-    func device(device: TCDevice!, didReceiveIncomingConnection connection: TCConnection!) {
+    func device(device: TCDevice!, didReceiveIncomingConnection newConnection: TCConnection!) {
         println("didReceiveIncomingConnection")
+        hangUp()
+        connection = newConnection
+        connection!.accept()
     }
     
     func device(device: TCDevice!, didReceivePresenceUpdate presenceEvent: TCPresenceEvent!) {
@@ -38,6 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
     
     func deviceDidStartListeningForIncomingConnections(device: TCDevice!) {
         println("deviceDidStartListeningForIncomingConnections")
+    }
+    
+    // MARK: - Call control methods
+    
+    func hangUp() {
+        connection?.disconnect()
+        connection = nil
     }
     
 }

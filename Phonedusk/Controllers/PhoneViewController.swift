@@ -21,6 +21,10 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
         presentViewController(picker, animated: true, completion: nil)
     }
     
+    @IBAction func hangUp() {
+        appDelegate.hangUp()
+    }
+    
     func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson personRef: ABRecord!) {
         let person = APContact(recordRef: personRef, fieldMask: .Default)
         println("\(person.lastName), \(person.firstName): \(person.phones)")
