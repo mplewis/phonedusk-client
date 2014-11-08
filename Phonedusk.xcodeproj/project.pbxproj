@@ -588,6 +588,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phonedusk/**",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Resources/Phonedusk-Bridging-Header.h";
 			};
@@ -602,6 +606,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phonedusk/**",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Phonedusk/Resources/Phonedusk-Bridging-Header.h";
