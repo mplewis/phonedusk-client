@@ -129,7 +129,7 @@
 			children = (
 				369D185C1A0E9E8400334F09 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		369D18831A0EA03300334F09 /* Controllers */ = {
@@ -138,7 +138,7 @@
 				369D187F1A0EA02900334F09 /* PhoneViewController.swift */,
 				369D18811A0EA02F00334F09 /* SettingsViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		369D18841A0EA04000334F09 /* App Delegate */ = {
@@ -146,7 +146,7 @@
 			children = (
 				369D185D1A0E9E8400334F09 /* AppDelegate.swift */,
 			);
-			name = "App Delegate";
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 		369D18851A0EA04500334F09 /* Views */ = {
@@ -155,14 +155,14 @@
 				369D18681A0E9E8400334F09 /* LaunchScreen.xib */,
 				369D18631A0E9E8400334F09 /* Main.storyboard */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		369D18861A0EA04700334F09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		369D18871A0EA31D00334F09 /* Vendor */ = {
@@ -170,7 +170,7 @@
 			children = (
 				369D18881A0EA32000334F09 /* Twilio */,
 			);
-			name = Vendor;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		369D18881A0EA32000334F09 /* Twilio */ = {
@@ -186,7 +186,7 @@
 				369D18901A0EA34100334F09 /* libssl.a */,
 				369D18911A0EA34100334F09 /* libTwilioClient.a */,
 			);
-			name = Twilio;
+			path = Twilio;
 			sourceTree = "<group>";
 		};
 		369D18951A0EA35100334F09 /* Resources */ = {
@@ -195,7 +195,7 @@
 				369D18661A0E9E8400334F09 /* Images.xcassets */,
 				369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		369D1AC81A0EBBB600334F09 /* Products */ = {
@@ -419,7 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Phonedusk/Info.plist;
+				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,7 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Phonedusk/Info.plist;
+				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
