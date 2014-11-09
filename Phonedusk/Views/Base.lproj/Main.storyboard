@@ -177,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(612) 555-1212" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pS-aI-yfC">
-                                <rect key="frame" x="147" y="108" width="145" height="30"/>
+                                <rect key="frame" x="147" y="108" width="437" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="373" id="BaN-o0-y83"/>
                                     <constraint firstAttribute="height" constant="30" id="EYB-v4-hCP"/>
@@ -189,6 +189,7 @@
                                     <mask key="constraints">
                                         <exclude reference="BaN-o0-y83"/>
                                         <exclude reference="EYB-v4-hCP"/>
+                                        <exclude reference="kXn-67-XBh"/>
                                     </mask>
                                 </variation>
                             </textField>
@@ -197,6 +198,7 @@
                         <constraints>
                             <constraint firstItem="LrG-Qf-I4w" firstAttribute="top" secondItem="0pS-aI-yfC" secondAttribute="bottom" constant="8" id="2Nz-un-gQS"/>
                             <constraint firstItem="0pS-aI-yfC" firstAttribute="leading" secondItem="yUY-FK-1Kq" secondAttribute="trailing" constant="15" id="6KU-is-KH8"/>
+                            <constraint firstItem="0pS-aI-yfC" firstAttribute="trailing" secondItem="FEa-Zv-ELh" secondAttribute="trailingMargin" id="BkE-Gt-yTB"/>
                             <constraint firstItem="u2x-Sq-9Wd" firstAttribute="top" secondItem="x79-cU-h7m" secondAttribute="bottom" constant="8" id="Ein-aL-6xd"/>
                             <constraint firstItem="aiU-iH-uhk" firstAttribute="leading" secondItem="FEa-Zv-ELh" secondAttribute="leadingMargin" id="FY7-1c-enO"/>
                             <constraint firstItem="aiU-iH-uhk" firstAttribute="top" secondItem="x79-cU-h7m" secondAttribute="bottom" constant="11" id="HXj-kl-NBL"/>
