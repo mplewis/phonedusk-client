@@ -12,10 +12,6 @@ let blacklistEndpoint = "blacklist"
 let phoneNumberKey = "phone_number"
 
 class ContactsTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
-
-    struct firstHolder {
-        static var first: dispatch_once_t = 0;
-    }
     
     var whitelist: [Contact]
     var blacklist: [Contact]
@@ -23,7 +19,7 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
     var toDelWhitelist: [Contact]
     var toAddBlacklist: [Contact]
     var toDelBlacklist: [Contact]
-    
+
     required init(coder aDecoder: NSCoder) {
         whitelist = [Contact]()
         blacklist = [Contact]()
@@ -33,24 +29,23 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
         toDelBlacklist = [Contact]()
         super.init(coder:aDecoder)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loadInitialData()
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.rightBarButtonItem = editButtonItem()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Load initial data only once
-        dispatch_once(&firstHolder.first) { () in
-            self.loadInitialData()
-        }
-    }
-    
     func loadInitialData() {
-        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-        hud.labelText = "Loading contacts..."
+        var hud: MBProgressHUD?
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud!.labelText = "Loading contacts..."
+        })
         let group = dispatch_group_create()
         var whitelistJson = ""
         var blacklistJson = ""
@@ -81,10 +76,10 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
             dispatch_group_leave(group)
         }
         dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            hud.labelText = "Loaded!"
-            hud.customView = UIImageView(image: UIImage(named: "checkmark"))
-            hud.mode = MBProgressHUDModeCustomView
-            hud.hide(true, afterDelay: 1.0)
+            hud!.labelText = "Loaded!"
+            hud!.customView = UIImageView(image: UIImage(named: "checkmark"))
+            hud!.mode = MBProgressHUDModeCustomView
+            hud!.hide(true, afterDelay: 1.0)
             let whitelistJsonArray = JSON.parse(whitelistJson).asDictionary?["phone_numbers"]?.asArray?
             let blacklistJsonArray = JSON.parse(blacklistJson).asDictionary?["phone_numbers"]?.asArray?
             for number in whitelistJsonArray! {
