@@ -20,20 +20,10 @@ let manager = AFHTTPRequestOperationManager(baseURL: NSURL(string: baseEndpoint)
 let reqSerializer = AFHTTPRequestSerializer()
 let respSerializer = AFHTTPResponseSerializer()
 
-protocol CallInfoDelegate {
-    func callDidStartConnecting(connection: TCConnection!)
-    func callDidConnect(connection: TCConnection!)
-    func callDidDisconnect(connection: TCConnection!)
-    func callDidFail(connection: TCConnection!, error: NSError!)
-}
-
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConnectionDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var device: TCDevice?
-    var connection: TCConnection?
-    var callInfoDelegate: CallInfoDelegate?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Set up manager and serializer to use HTTP Basic Auth
@@ -42,97 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConne
         manager.requestSerializer = reqSerializer
         manager.responseSerializer = respSerializer
         
-        getNewToken()
         return true
-    }
-    
-    // MARK: - Twilio setup methods
-    
-    func getNewToken() {
-        println("Requesting new token...")
-        manager.GET(tokenEndpoint, parameters: nil, success: { (operation, response) -> Void in
-            let body = NSString(data: response as NSData, encoding: NSUTF8StringEncoding)
-            if (body != nil) {
-                let token = body!
-                self.device = TCDevice(capabilityToken: token, delegate: self)
-                println("New TCDevice created from token")
-            } else {
-                println("Got a nil body")
-            }
-        }, failure: { (operation, error) -> Void in
-            println(error)
-        })
-    }
-    
-    // MARK: - TCDeviceDelegate methods
-    
-    func device(device: TCDevice!, didReceiveIncomingConnection newConnection: TCConnection!) {
-        println("didReceiveIncomingConnection")
-        hangUp()
-        connection = newConnection
-        connection!.delegate = self
-        connection!.accept()
-    }
-    
-    func device(device: TCDevice!, didReceivePresenceUpdate presenceEvent: TCPresenceEvent!) {
-        println("didReceivePresenceUpdate")
-    }
-    
-    func device(device: TCDevice!, didStopListeningForIncomingConnections error: NSError!) {
-        println("didStopListeningForIncomingConnections")
-    }
-    
-    func deviceDidStartListeningForIncomingConnections(device: TCDevice!) {
-        println("deviceDidStartListeningForIncomingConnections")
-    }
-    
-    // MARK: - TCConnectionDelegate methods
-    
-    func connection(connection: TCConnection!, didFailWithError error: NSError!) {
-        println("didFailWithError: \(error)")
-        callInfoDelegate?.callDidFail(connection, error: error)
-    }
-    
-    func connectionDidStartConnecting(connection: TCConnection!) {
-        println("connectionDidStartConnecting")
-        callInfoDelegate?.callDidStartConnecting(connection)
-    }
-    
-    func connectionDidConnect(connection: TCConnection!) {
-        println("connectionDidConnect")
-        callInfoDelegate?.callDidConnect(connection)
-    }
-    
-    func connectionDidDisconnect(connection: TCConnection!) {
-        println("connectionDidDisconnect")
-        callInfoDelegate?.callDidDisconnect(connection)
-    }
-    
-    // MARK: - Call control methods
-    
-    func callNumber(number: String) {
-        hangUp()
-        let params = ["from": myNumber, "to": number]
-        manager.POST(outgoingEndpoint, parameters: params, success: { (operation, response) -> Void in
-            let body = NSString(data: response as NSData, encoding: NSUTF8StringEncoding)
-            if (body != nil) {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
-                self.callInfoDelegate = callModal
-                callModal.numberCalling = number
-                let rootVC = self.window!.rootViewController!
-                rootVC.presentViewController(callModal, animated: true, completion: nil)
-            } else {
-                println("Got a nil body")
-            }
-        }, failure: { (operation, error) -> Void in
-                println(error)
-        })
-    }
-    
-    func hangUp() {
-        connection?.disconnect()
-        connection = nil
     }
     
 }

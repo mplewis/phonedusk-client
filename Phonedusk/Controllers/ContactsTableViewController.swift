@@ -27,7 +27,6 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
         } else {
             navigationItem.leftBarButtonItem = nil
         }
-        println("Editing mode: \(editing)")
     }
     
     // MARK: - UITableViewDataSource
@@ -51,6 +50,8 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
     
     // MARK: - UITableViewDelegate
     
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
 }

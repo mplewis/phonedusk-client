@@ -82,7 +82,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="hangUp" destination="FfJ-ir-Jhb" eventType="touchUpInside" id="wKx-dh-lhd"/>
+                                    <action selector="hangUpClicked" destination="FfJ-ir-Jhb" eventType="touchUpInside" id="Efy-li-NLZ"/>
                                 </connections>
                             </button>
                         </subviews>

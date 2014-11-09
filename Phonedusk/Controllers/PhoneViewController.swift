@@ -9,10 +9,15 @@
 import UIKit
 import AddressBookUI
 
-class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerDelegate {
+class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerDelegate, TCDeviceDelegate {
 
+    var device: TCDevice?
+    var hud: MBProgressHUD?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getNewToken()
+        showConnectingHUD()
     }
 
     @IBAction func selectContact() {
@@ -21,18 +26,13 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
         presentViewController(picker, animated: true, completion: nil)
     }
     
-    @IBAction func hangUp() {
-        appDelegate.hangUp()
-    }
-    
     func peoplePickerNavigationController(peoplePicker: ABPeoplePickerNavigationController!, didSelectPerson personRef: ABRecord!) {
         let person = APContact(recordRef: personRef, fieldMask: .Default)
         let alertController = UIAlertController(title: nil, message: "Calling \(person.firstName) \(person.lastName)", preferredStyle: .ActionSheet)
         for numberRaw in person.phones {
             if let number = numberRaw as? String {
                 let phoneAction = UIAlertAction(title: number, style: .Default) { (_) in
-                    println("Calling \(number)")
-                    appDelegate.callNumber(number)
+                    self.callNumber(number)
                 }
                 alertController.addAction(phoneAction)
             } else {
@@ -45,6 +45,80 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
 
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.presentViewController(alertController, animated: true, completion: nil)
+        })
+    }
+    
+    func showConnectingHUD() {
+        hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud!.labelText = "Connecting to Twilio..."
+    }
+    
+    func showConnectedHUD() {
+        if let h = hud {
+            h.labelText = "Connected!"
+            h.customView = UIImageView(image: UIImage(named: "checkmark"))
+            h.mode = MBProgressHUDModeCustomView
+            h.hide(true, afterDelay: 1.0)
+        }
+    }
+    
+    func deviceDidStartListeningForIncomingConnections(device: TCDevice!) {
+        showConnectedHUD()
+    }
+    
+    func device(device: TCDevice!, didReceiveIncomingConnection connection: TCConnection!) {
+        let caller = connection.parameters[TCConnectionIncomingParameterFromKey] as String
+        let alertController = UIAlertController(title: "Incoming call", message: caller, preferredStyle: .Alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            connection.reject()
+        }
+        let accept = UIAlertAction(title: "Accept", style: .Default) { (action) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
+            connection.delegate = callModal
+            callModal.numberCalling = caller
+            self.presentViewController(callModal, animated: true, completion: nil)
+            connection.accept()
+        }
+    }
+    
+    func device(device: TCDevice!, didReceivePresenceUpdate presenceEvent: TCPresenceEvent!) {
+        
+    }
+    
+    func device(device: TCDevice!, didStopListeningForIncomingConnections error: NSError!) {
+        showConnectingHUD()
+    }
+    
+    
+    
+    // MARK: - Twilio setup methods
+    
+    func getNewToken() {
+        println("Requesting new token...")
+        manager.GET(tokenEndpoint, parameters: nil, success: { (operation, response) -> Void in
+            let body = NSString(data: response as NSData, encoding: NSUTF8StringEncoding)
+            if (body != nil) {
+                let token = body!
+                self.device = TCDevice(capabilityToken: token, delegate: self)
+                println("New TCDevice created from token")
+            } else {
+                println("Got a nil body")
+            }
+        }, failure: { (operation, error) -> Void in
+            println(error)
+        })
+    }
+    
+    // MARK: - Call control methods
+    
+    func callNumber(number: String) {
+        let params = ["from": myNumber, "to": number]
+        manager.POST(outgoingEndpoint, parameters: params, success: { (operation, response) -> Void in
+            // TODO: Add behavior back in
+            println("Calling numbers is not yet implemented.")
+        }, failure: { (operation, error) -> Void in
+            println(error)
         })
     }
 

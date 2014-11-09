@@ -14,8 +14,4 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func getNewToken() {
-        appDelegate.getNewToken()
-    }
-
 }
