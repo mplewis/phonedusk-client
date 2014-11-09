@@ -44,67 +44,59 @@
             <point key="canvasLocation" x="1428" y="-320"/>
         </scene>
         <!--Call View Controller-->
-        <scene sceneID="SgT-hn-gdj">
+        <scene sceneID="mKF-pw-nan">
             <objects>
-                <viewController storyboardIdentifier="CallViewController" id="FfJ-ir-Jhb" customClass="CallViewController" customModule="Phonedusk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3fd-Ri-6lY" customClass="CallViewController" customModule="Phonedusk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="E1f-fZ-VDA"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZeI-Bv-Lne"/>
+                        <viewControllerLayoutGuide type="top" id="MB2-6Q-xIl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zm8-u9-wtw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8nG-ZO-PWE">
+                    <view key="view" contentMode="scaleToFill" id="YpC-LG-7wc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPC-zZ-3gW" customClass="M13ProgressViewRing">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-qO-aCi" customClass="M13ProgressViewRing">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Ri6-Vb-Aop"/>
-                                    <constraint firstAttribute="height" constant="200" id="vRU-hz-A8R"/>
+                                    <constraint firstAttribute="height" constant="200" id="qyy-g0-CBx"/>
+                                    <constraint firstAttribute="width" constant="200" id="sod-2Q-XyQ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dialing 123-123-1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVS-rj-L47">
-                                <rect key="frame" x="16" y="171" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvZ-Os-8P5">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Kwd-Jq-dJE"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ely-bD-2J7"/>
+                                    <constraint firstAttribute="width" constant="200" id="b7h-x2-fTK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="68"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ns-sw-f4z">
-                                <rect key="frame" x="270" y="408" width="61" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LhZ-3q-EpG"/>
-                                    <constraint firstAttribute="width" constant="61" id="TBe-xt-lDn"/>
-                                </constraints>
-                                <state key="normal" title="Hang Up">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="hangUpClicked" destination="FfJ-ir-Jhb" eventType="touchUpInside" id="Efy-li-NLZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xVS-rj-L47" firstAttribute="leading" secondItem="8nG-ZO-PWE" secondAttribute="leadingMargin" id="9fx-Za-uoi"/>
-                            <constraint firstAttribute="centerY" secondItem="kPC-zZ-3gW" secondAttribute="centerY" id="DPp-zR-bg8"/>
-                            <constraint firstAttribute="centerX" secondItem="kPC-zZ-3gW" secondAttribute="centerX" id="Puw-6K-b5Y"/>
-                            <constraint firstAttribute="centerX" secondItem="6Ns-sw-f4z" secondAttribute="centerX" constant="-0.5" id="Q2s-Dv-QCc"/>
-                            <constraint firstItem="xVS-rj-L47" firstAttribute="trailing" secondItem="8nG-ZO-PWE" secondAttribute="trailingMargin" id="T86-W2-0z2"/>
-                            <constraint firstItem="6Ns-sw-f4z" firstAttribute="top" secondItem="kPC-zZ-3gW" secondAttribute="bottom" constant="8" id="hOe-7w-A52"/>
-                            <constraint firstItem="kPC-zZ-3gW" firstAttribute="top" secondItem="xVS-rj-L47" secondAttribute="bottom" constant="8" id="tVV-mm-gqv"/>
+                            <constraint firstAttribute="centerY" secondItem="qkC-qO-aCi" secondAttribute="centerY" id="YyK-VL-3MX"/>
+                            <constraint firstAttribute="centerX" secondItem="qkC-qO-aCi" secondAttribute="centerX" id="ZBl-Se-9FS"/>
+                            <constraint firstAttribute="centerX" secondItem="MvZ-Os-8P5" secondAttribute="centerX" id="kF3-nQ-bBt"/>
+                            <constraint firstAttribute="centerY" secondItem="MvZ-Os-8P5" secondAttribute="centerY" id="psr-by-4zF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sl6-G8-Cd3">
+                        <barButtonItem key="rightBarButtonItem" title="Hang Up" id="jpb-Rw-apf">
+                            <connections>
+                                <action selector="hangUp:" destination="3fd-Ri-6lY" id="nkz-z2-uHH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="dialingText" destination="xVS-rj-L47" id="n91-tp-3xy"/>
-                        <outlet property="progressSpinner" destination="kPC-zZ-3gW" id="RS0-GK-aaD"/>
+                        <outlet property="callTime" destination="MvZ-Os-8P5" id="6g3-fB-9nj"/>
+                        <outlet property="progressRing" destination="qkC-qO-aCi" id="x6D-Kz-yXb"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qw9-1G-Rwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDq-9Y-1Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-590"/>
+            <point key="canvasLocation" x="2898" y="-610"/>
         </scene>
         <!--Add New Contact-->
         <scene sceneID="4cl-9X-8Fv">
@@ -448,6 +440,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYa-lh-tE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212" y="93"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hWb-Sd-3l7">
+            <objects>
+                <navigationController storyboardIdentifier="CallModal" automaticallyAdjustsScrollViewInsets="NO" id="Yv6-tc-l8B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jS-3G-s3k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3fd-Ri-6lY" kind="relationship" relationship="rootViewController" id="pTw-nP-Ej4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFX-Zq-3KD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="-610"/>
         </scene>
     </scenes>
     <resources>

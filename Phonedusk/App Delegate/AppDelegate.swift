@@ -8,7 +8,7 @@
 
 import UIKit
 
-let baseEndpoint = "https://phonedusk-herokuapp-com-qtbo0fcl1ey2.runscope.net/api/"
+let baseEndpoint = "https://phonedusk.herokuapp.com/api/"
 let tokenEndpoint = "capability_token"
 let outgoingEndpoint = "start_call"
 let myNumber = "+16125675654"

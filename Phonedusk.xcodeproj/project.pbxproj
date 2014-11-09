@@ -17,6 +17,7 @@
 		369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D188F1A0EA34100334F09 /* libcrypto.a */; };
 		369D18931A0EA34200334F09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18901A0EA34100334F09 /* libssl.a */; };
 		369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18911A0EA34100334F09 /* libTwilioClient.a */; };
+		36A320491A0FAEC6000979E8 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A320481A0FAEC6000979E8 /* CallViewController.swift */; };
 		36A491D51A0ECE7600C2942B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D31A0ECE7600C2942B /* AddressBook.framework */; };
 		36A491D61A0ECE7600C2942B /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D41A0ECE7600C2942B /* AddressBookUI.framework */; };
 		36A491DC1A0ECFE500C2942B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D81A0ECFE500C2942B /* AudioToolbox.framework */; };
@@ -61,7 +62,6 @@
 		36A492521A0EFEFC00C2942B /* M13ProgressViewSegmentedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4923E1A0EFEFB00C2942B /* M13ProgressViewSegmentedBar.m */; };
 		36A492531A0EFEFC00C2942B /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492401A0EFEFB00C2942B /* M13ProgressViewSegmentedRing.m */; };
 		36A492541A0EFEFC00C2942B /* M13ProgressViewStripedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492421A0EFEFB00C2942B /* M13ProgressViewStripedBar.m */; };
-		36A492561A0EFF7500C2942B /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A492551A0EFF7500C2942B /* CallViewController.swift */; };
 		36A4926B1A0F365800C2942B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492591A0F365800C2942B /* AFHTTPRequestOperation.m */; };
 		36A4926C1A0F365800C2942B /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4925B1A0F365800C2942B /* AFHTTPRequestOperationManager.m */; };
 		36A4926D1A0F365800C2942B /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4925D1A0F365800C2942B /* AFHTTPSessionManager.m */; };
@@ -110,6 +110,7 @@
 		369D18901A0EA34100334F09 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		369D18911A0EA34100334F09 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
 		369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phonedusk-Bridging-Header.h"; sourceTree = "<group>"; };
+		36A320481A0FAEC6000979E8 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		36A491D31A0ECE7600C2942B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		36A491D41A0ECE7600C2942B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		36A491D81A0ECFE500C2942B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -179,7 +180,6 @@
 		36A492401A0EFEFB00C2942B /* M13ProgressViewSegmentedRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressViewSegmentedRing.m; sourceTree = "<group>"; };
 		36A492411A0EFEFB00C2942B /* M13ProgressViewStripedBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13ProgressViewStripedBar.h; sourceTree = "<group>"; };
 		36A492421A0EFEFB00C2942B /* M13ProgressViewStripedBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressViewStripedBar.m; sourceTree = "<group>"; };
-		36A492551A0EFF7500C2942B /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		36A492581A0F365800C2942B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		36A492591A0F365800C2942B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		36A4925A1A0F365800C2942B /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 				369D187F1A0EA02900334F09 /* PhoneViewController.swift */,
 				36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */,
 				369D18811A0EA02F00334F09 /* SettingsViewController.swift */,
-				36A492551A0EFF7500C2942B /* CallViewController.swift */,
 				36A4927E1A0F776400C2942B /* NewContactViewController.swift */,
+				36A320481A0FAEC6000979E8 /* CallViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -620,6 +620,7 @@
 				36A492491A0EFEFC00C2942B /* M13ProgressViewBorderedBar.m in Sources */,
 				36A4927F1A0F776400C2942B /* NewContactViewController.swift in Sources */,
 				36A4924E1A0EFEFC00C2942B /* M13ProgressViewMetroDotPolygon.m in Sources */,
+				36A320491A0FAEC6000979E8 /* CallViewController.swift in Sources */,
 				36A492541A0EFEFC00C2942B /* M13ProgressViewStripedBar.m in Sources */,
 				36A492531A0EFEFC00C2942B /* M13ProgressViewSegmentedRing.m in Sources */,
 				36A492431A0EFEFC00C2942B /* M13ProgressConsole.m in Sources */,
@@ -628,7 +629,6 @@
 				36A4924C1A0EFEFC00C2942B /* M13ProgressViewLetterpress.m in Sources */,
 				36A4920F1A0ED81100C2942B /* APAddressBook.m in Sources */,
 				36A492451A0EFEFC00C2942B /* UIImage+ImageEffects.m in Sources */,
-				36A492561A0EFF7500C2942B /* CallViewController.swift in Sources */,
 				36A4924B1A0EFEFC00C2942B /* M13ProgressViewImage.m in Sources */,
 				36A4920E1A0ED81100C2942B /* APAddress.m in Sources */,
 				36A4924F1A0EFEFC00C2942B /* M13ProgressViewPie.m in Sources */,
@@ -758,7 +758,7 @@
 		369D187A1A0E9E8400334F09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -778,7 +778,7 @@
 		369D187B1A0E9E8400334F09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

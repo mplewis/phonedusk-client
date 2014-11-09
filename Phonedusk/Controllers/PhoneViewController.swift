@@ -75,11 +75,11 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
         }
         let accept = UIAlertAction(title: "Accept", style: .Default) { (action) in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
-            connection.delegate = callModal
-            callModal.numberCalling = caller
-            callModal.connection = connection
-            connection.accept()
+            let callModal = storyboard.instantiateViewControllerWithIdentifier("CallModal") as UINavigationController
+            let callVC = callModal.viewControllers[0] as CallViewController
+            callVC.connection = connection
+            connection.delegate = callVC
+            callVC.number = caller
             self.presentViewController(callModal, animated: true, completion: nil)
         }
         alertController.addAction(cancel)
@@ -120,10 +120,10 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
     
     func callNumber(number: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
-        callModal.numberCalling = number
-        let connection = device?.connect(["PhoneNumber": number], delegate: callModal)
-        callModal.connection = connection
+        let callModal = storyboard.instantiateViewControllerWithIdentifier("CallModal") as UINavigationController
+        let callVC = callModal.viewControllers[0] as CallViewController
+        callVC.connection = device?.connect(["PhoneNumber": number], delegate: callVC)
+        callVC.number = number
         self.presentViewController(callModal, animated: true, completion: nil)
     }
 

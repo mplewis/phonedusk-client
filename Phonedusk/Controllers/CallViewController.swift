@@ -2,81 +2,77 @@
 //  CallViewController.swift
 //  Phonedusk
 //
-//  Created by Matthew Lewis on 11/8/14.
+//  Created by Matthew Lewis on 11/9/14.
 //  Copyright (c) 2014 Kestrel Development. All rights reserved.
 //
 
-enum CallState {
-    case Dialing, StartedConnecting, Connected, Disconnected, Failed
-}
-
 class CallViewController: UIViewController, TCConnectionDelegate {
-
-    @IBOutlet weak var dialingText: UILabel!
-    @IBOutlet weak var progressSpinner: M13ProgressViewRing!
+    
+    @IBOutlet weak var progressRing: M13ProgressViewRing!
+    @IBOutlet weak var callTime: UILabel!
     
     var connection: TCConnection?
-    var numberCalling: String = ""
-    var callState: CallState = .Dialing
-    var dialingTimeoutTimer: NSTimer?
+    var number: String? {
+        didSet {
+            navigationItem.title = number
+        }
+    }
+    var seconds = 0
+    var timer: NSTimer?
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        progressSpinner.indeterminate = true
-        progressSpinner.showPercentage = false
-        dialingText.text = "Setting up call..."
-        dialingTimeoutTimer = NSTimer.scheduledTimerWithTimeInterval(20.0, target: self, selector: Selector("checkDialingTimeout"), userInfo: nil, repeats: false)
+        self.progressRing.indeterminate = true
+        self.progressRing.showPercentage = false
+        self.connection?.accept()
     }
     
     override func viewWillDisappear(animated: Bool) {
-        dialingTimeoutTimer?.invalidate()
+        if let t = timer {
+            t.invalidate()
+        }
     }
     
-    func hangUp() {
-        connection?.disconnect()
+    func incrementTimer() {
+        let minutes = seconds / 60
+        var minStr = "\(minutes % 60)"
+        if (minutes < 10) {
+            minStr = "0" + minStr
+        }
+        var secStr = "\(seconds % 60)"
+        if (seconds < 10) {
+            secStr = "0" + secStr
+        }
+        let time = "\(minStr):\(secStr)"
+        callTime.text = time
+        seconds += 1
     }
 
-    @IBAction func hangUpClicked() {
-        hangUp()
-        if (callState != .StartedConnecting && callState != .Connected) {
-            dismissViewControllerAnimated(true, completion: nil)
-        }
-    }
-    
-    func checkDialingTimeout() {
-        if (callState == .Dialing) {
-            hangUp()
-            showCallFailure()
-        }
-    }
-    
-    func showCallFailure() {
-        dialingText.text = "Call failed to \(numberCalling)"
-        progressSpinner.performAction(M13ProgressViewActionFailure, animated: true)
-        progressSpinner.indeterminate = false
-        callState = .Failed
-    }
-    
-    func connectionDidStartConnecting(connection: TCConnection!) {
-        dialingText.text = "Connecting to \(numberCalling)..."
-        callState = .StartedConnecting
+    func connection(connection: TCConnection!, didFailWithError error: NSError!) {
+        println("connection:didFailWithError")
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func connectionDidConnect(connection: TCConnection!) {
-        dialingText.text = "Connected to \(numberCalling)"
-        progressSpinner.performAction(M13ProgressViewActionNone, animated: true)
-        progressSpinner.indeterminate = false
-        callState = .Connected
-    }
-
-    func connectionDidDisconnect(connection: TCConnection!) {
-        dialingText.text = "Call to \(numberCalling) ended"
-        progressSpinner.performAction(M13ProgressViewActionSuccess, animated: true)
-        progressSpinner.indeterminate = false
-        callState = .Disconnected
+        println("connectionDidConnect")
+        progressRing.indeterminate = false
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("incrementTimer"), userInfo: nil, repeats: true)
+        })
     }
     
-    func connection(connection: TCConnection!, didFailWithError error: NSError!) {
-        showCallFailure()
+    func connectionDidDisconnect(connection: TCConnection!) {
+        println("connectionDidDisconnect")
+        dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func connectionDidStartConnecting(connection: TCConnection!) {
+        println("connectionDidStartConnecting")
+        progressRing.indeterminate = false
+    }
+    
+    @IBAction func hangUp(sender: AnyObject) {
+        connection?.disconnect()
+    }
+    
 }
