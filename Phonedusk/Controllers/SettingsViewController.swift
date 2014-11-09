@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 let tokenEndpoint = "http://phonedusk.herokuapp.com/api/capability_token"
 
@@ -19,14 +18,7 @@ class SettingsViewController: UIViewController {
 
     @IBAction func getNewToken() {
         println("Requesting new token...")
-        Alamofire.request(.GET, tokenEndpoint).responseString { (request, response, data, error) in
-            if (error != nil) {
-                println(error)
-                return
-            }
-            let token = data!
-            appDelegate.device = TCDevice(capabilityToken: token, delegate: appDelegate)
-        }
+        appDelegate.getNewToken()
     }
 
 }

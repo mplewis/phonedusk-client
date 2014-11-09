@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 
@@ -18,8 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
     var connection: TCConnection?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        getNewToken()
         return true
+    }
+    
+    // MARK: - Twilio setup methods
+    func getNewToken() {
+        Alamofire.request(.GET, tokenEndpoint).responseString { (request, response, data, error) in
+            if (error != nil) {
+                println(error)
+                return
+            }
+            let token = data!
+            appDelegate.device = TCDevice(capabilityToken: token, delegate: appDelegate)
+        }
     }
     
     // MARK: - TCDeviceDelegate methods
