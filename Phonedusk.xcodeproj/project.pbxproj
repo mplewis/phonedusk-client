@@ -70,6 +70,8 @@
 		36A492711A0F365800C2942B /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492661A0F365800C2942B /* AFURLRequestSerialization.m */; };
 		36A492721A0F365800C2942B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492681A0F365800C2942B /* AFURLResponseSerialization.m */; };
 		36A492731A0F365800C2942B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4926A1A0F365800C2942B /* AFURLSessionManager.m */; };
+		36A492771A0F4D7700C2942B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492761A0F4D7700C2942B /* MBProgressHUD.m */; };
+		36A4927B1A0F4E5C00C2942B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -193,6 +195,9 @@
 		36A492681A0F365800C2942B /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		36A492691A0F365800C2942B /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		36A4926A1A0F365800C2942B /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		36A492751A0F4D7700C2942B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		36A492761A0F4D7700C2942B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				369D187F1A0EA02900334F09 /* PhoneViewController.swift */,
+				36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */,
 				369D18811A0EA02F00334F09 /* SettingsViewController.swift */,
 				36A492551A0EFF7500C2942B /* CallViewController.swift */,
 			);
@@ -291,6 +297,7 @@
 		369D18871A0EA31D00334F09 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				36A492741A0F4D6B00C2942B /* MBProgressHUD */,
 				36A492571A0F365800C2942B /* AFNetworking */,
 				36A492191A0EFEED00C2942B /* M13ProgressSuite */,
 				36A491FF1A0ED81100C2942B /* APAddressBook */,
@@ -496,6 +503,15 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		36A492741A0F4D6B00C2942B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				36A492751A0F4D7700C2942B /* MBProgressHUD.h */,
+				36A492761A0F4D7700C2942B /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +625,8 @@
 				36A492441A0EFEFC00C2942B /* M13ProgressHUD.m in Sources */,
 				36A492721A0F365800C2942B /* AFURLResponseSerialization.m in Sources */,
 				369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */,
+				36A4927B1A0F4E5C00C2942B /* ContactsTableViewController.swift in Sources */,
+				36A492771A0F4D7700C2942B /* MBProgressHUD.m in Sources */,
 				36A492461A0EFEFC00C2942B /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				36A4926B1A0F365800C2942B /* AFHTTPRequestOperation.m in Sources */,
 				36A492701A0F365800C2942B /* AFURLConnectionOperation.m in Sources */,
