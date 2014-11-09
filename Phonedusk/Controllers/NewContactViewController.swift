@@ -8,6 +8,10 @@
 
 import AddressBookUI
 
+enum ContactListType: Int {
+    case Whitelist = 0, Blacklist
+}
+
 class NewContactViewController: UIViewController, ABPeoplePickerNavigationControllerDelegate {
 
     @IBOutlet weak var addToSelector: UISegmentedControl!
@@ -20,7 +24,7 @@ class NewContactViewController: UIViewController, ABPeoplePickerNavigationContro
             validatePhoneNumber()
         }
     }
-    var completionBlock: (number: String) -> Void = { (number) in }
+    var completionBlock: (number: String, list: ContactListType) -> Void = { (number) in }
     
     @IBAction func dismissModal(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -33,7 +37,8 @@ class NewContactViewController: UIViewController, ABPeoplePickerNavigationContro
     }
     
     @IBAction func saveContact(sender: AnyObject) {
-        completionBlock(number: phoneNumber)
+        let list = ContactListType(rawValue: addToSelector.selectedSegmentIndex)!
+        completionBlock(number: phoneNumberField.text, list: list)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

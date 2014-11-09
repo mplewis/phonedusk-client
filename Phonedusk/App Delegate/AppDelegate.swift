@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Set up manager and serializer to use HTTP Basic Auth
         reqSerializer.setAuthorizationHeaderFieldWithUsername(username, password: password)
-        respSerializer.acceptableContentTypes = NSSet(array: ["text/plain", "text/html"])
+        respSerializer.acceptableContentTypes = NSSet(array: ["text/plain", "text/html", "application/json"])
         manager.requestSerializer = reqSerializer
         manager.responseSerializer = respSerializer
         

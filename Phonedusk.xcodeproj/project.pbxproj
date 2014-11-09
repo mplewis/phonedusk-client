@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360157C41A0F906700BD3869 /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360157C31A0F906700BD3869 /* json.swift */; };
 		369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D185D1A0E9E8400334F09 /* AppDelegate.swift */; };
 		369D18651A0E9E8400334F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369D18631A0E9E8400334F09 /* Main.storyboard */; };
 		369D18671A0E9E8400334F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369D18661A0E9E8400334F09 /* Images.xcassets */; };
@@ -90,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		360157C31A0F906700BD3869 /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 		369D18581A0E9E8400334F09 /* Phonedusk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonedusk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369D185C1A0E9E8400334F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369D185D1A0E9E8400334F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		369D18871A0EA31D00334F09 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				360157C31A0F906700BD3869 /* json.swift */,
 				36A492741A0F4D6B00C2942B /* MBProgressHUD */,
 				36A492571A0F365800C2942B /* AFNetworking */,
 				36A492191A0EFEED00C2942B /* M13ProgressSuite */,
@@ -634,6 +637,7 @@
 				36A492721A0F365800C2942B /* AFURLResponseSerialization.m in Sources */,
 				369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */,
 				36A4927B1A0F4E5C00C2942B /* ContactsTableViewController.swift in Sources */,
+				360157C41A0F906700BD3869 /* json.swift in Sources */,
 				36A492771A0F4D7700C2942B /* MBProgressHUD.m in Sources */,
 				36A492461A0EFEFC00C2942B /* UINavigationController+M13ProgressViewBar.m in Sources */,
 				36A4926B1A0F365800C2942B /* AFHTTPRequestOperation.m in Sources */,
@@ -754,7 +758,7 @@
 		369D187A1A0E9E8400334F09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -774,7 +778,7 @@
 		369D187B1A0E9E8400334F09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Phonedusk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,6 +7,5 @@
 //
 
 class Contact: NSObject {
-    var name = ""
     var number = ""
 }
