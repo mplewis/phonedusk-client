@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 
+let tokenEndpoint = "http://phonedusk.herokuapp.com/api/capability_token"
+
 let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConnectionDelegate {
 
     var window: UIWindow?
     var device: TCDevice?
@@ -41,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
         println("didReceiveIncomingConnection")
         hangUp()
         connection = newConnection
+        connection!.delegate = self
         connection!.accept()
     }
     
@@ -56,7 +59,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate {
         println("deviceDidStartListeningForIncomingConnections")
     }
     
+    // MARK: - TCConnectionDelegate methods
+    
+    func connection(connection: TCConnection!, didFailWithError error: NSError!) {
+        println("didFailWithError: \(error.localizedDescription)")
+    }
+    
+    func connectionDidStartConnecting(connection: TCConnection!) {
+        println("connectionDidStartConnecting")
+    }
+    
+    func connectionDidConnect(connection: TCConnection!) {
+        println("connectionDidConnect")
+    }
+    
+    func connectionDidDisconnect(connection: TCConnection!) {
+        println("connectionDidDisconnect")
+    }
+    
     // MARK: - Call control methods
+    
+    func callNumber(number: String) {
+        hangUp()
+        device?.connect(["PhoneNumber": number], delegate: self)
+    }
     
     func hangUp() {
         connection?.disconnect()

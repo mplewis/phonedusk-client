@@ -8,8 +8,6 @@
 
 import UIKit
 
-let tokenEndpoint = "http://phonedusk.herokuapp.com/api/capability_token"
-
 class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
