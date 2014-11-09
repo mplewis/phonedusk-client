@@ -43,7 +43,11 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
 
     func addContact() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newContactModal = storyboard.instantiateViewControllerWithIdentifier("NewContactNC") as UIViewController
+        let newContactModal = storyboard.instantiateViewControllerWithIdentifier("NewContactNC") as UINavigationController
+        let newContactVC = newContactModal.viewControllers![0] as NewContactViewController
+        newContactVC.completionBlock = { number in
+            println(number)
+        }
         self.presentViewController(newContactModal, animated: true, completion: nil)
     }
     
