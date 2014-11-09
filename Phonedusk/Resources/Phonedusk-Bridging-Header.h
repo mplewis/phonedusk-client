@@ -19,5 +19,6 @@
 #import "APPhoneWithLabel.h"
 #import "M13ProgressViewRing.h"
 #import "AFNetworking.h"
+#import "MBProgressHUD.h"
 
 #endif
