@@ -31,6 +31,7 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
         for numberRaw in person.phones {
             if let number = numberRaw as? String {
                 let phoneAction = UIAlertAction(title: number, style: .Default) { (_) in
+                    println("Calling \(number)")
                     appDelegate.callNumber(number)
                 }
                 alertController.addAction(phoneAction)

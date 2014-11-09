@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Phone-->
@@ -56,6 +57,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="SgT-hn-gdj">
+            <objects>
+                <viewController storyboardIdentifier="CallViewController" id="FfJ-ir-Jhb" customClass="CallViewController" customModule="Phonedusk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E1f-fZ-VDA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZeI-Bv-Lne"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8nG-ZO-PWE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPC-zZ-3gW" customClass="M13ProgressViewRing">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ri6-Vb-Aop"/>
+                                    <constraint firstAttribute="height" constant="200" id="vRU-hz-A8R"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dialing 123-123-1234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVS-rj-L47">
+                                <rect key="frame" x="16" y="171" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kwd-Jq-dJE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xVS-rj-L47" firstAttribute="leading" secondItem="8nG-ZO-PWE" secondAttribute="leadingMargin" id="9fx-Za-uoi"/>
+                            <constraint firstAttribute="centerY" secondItem="kPC-zZ-3gW" secondAttribute="centerY" id="DPp-zR-bg8"/>
+                            <constraint firstAttribute="centerX" secondItem="kPC-zZ-3gW" secondAttribute="centerX" id="Puw-6K-b5Y"/>
+                            <constraint firstItem="xVS-rj-L47" firstAttribute="trailing" secondItem="8nG-ZO-PWE" secondAttribute="trailingMargin" id="T86-W2-0z2"/>
+                            <constraint firstItem="kPC-zZ-3gW" firstAttribute="top" secondItem="xVS-rj-L47" secondAttribute="bottom" constant="8" id="tVV-mm-gqv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dialingText" destination="xVS-rj-L47" id="n91-tp-3xy"/>
+                        <outlet property="progressSpinner" destination="kPC-zZ-3gW" id="RS0-GK-aaD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qw9-1G-Rwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="-320"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">

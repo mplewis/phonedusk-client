@@ -17,5 +17,7 @@
 #import "APContact.h"
 #import "APAddress.h"
 #import "APPhoneWithLabel.h"
+#import "M13ProgressViewRing.h"
+#import "AFNetworking.h"
 
 #endif

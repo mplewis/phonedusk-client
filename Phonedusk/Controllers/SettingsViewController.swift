@@ -15,7 +15,6 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func getNewToken() {
-        println("Requesting new token...")
         appDelegate.getNewToken()
     }
 
