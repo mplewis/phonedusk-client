@@ -46,7 +46,10 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
         let newContactModal = storyboard.instantiateViewControllerWithIdentifier("NewContactNC") as UINavigationController
         let newContactVC = newContactModal.viewControllers![0] as NewContactViewController
         newContactVC.completionBlock = { number in
-            println(number)
+            let nonNumberChars = NSCharacterSet(charactersInString: "0123456789").invertedSet
+            let onlyNumbers = (number.componentsSeparatedByCharactersInSet(nonNumberChars) as NSArray).componentsJoinedByString("") as NSString
+            let lastNine = onlyNumbers.substringFromIndex(onlyNumbers.length - 10)
+            let fullNumber = "+1" + lastNine
         }
         self.presentViewController(newContactModal, animated: true, completion: nil)
     }

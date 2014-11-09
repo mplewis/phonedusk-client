@@ -12,10 +12,12 @@ class NewContactViewController: UIViewController, ABPeoplePickerNavigationContro
 
     @IBOutlet weak var addToSelector: UISegmentedControl!
     @IBOutlet weak var phoneNumberField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var phoneNumber: String = "" {
         didSet {
             phoneNumberField.text = phoneNumber
+            validatePhoneNumber()
         }
     }
     var completionBlock: (number: String) -> Void = { (number) in }
@@ -56,7 +58,14 @@ class NewContactViewController: UIViewController, ABPeoplePickerNavigationContro
                 self.presentViewController(alertController, animated: true, completion: nil)
             })
         }
-        
+    }
+    
+    @IBAction func validatePhoneNumber() {
+        if (phoneNumberField.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0) {
+            saveButton.enabled = false
+        } else {
+            saveButton.enabled = true
+        }
     }
     
 }

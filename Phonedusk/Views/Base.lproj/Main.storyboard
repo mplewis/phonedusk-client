@@ -134,6 +134,9 @@
                                         <exclude reference="kXn-67-XBh"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="validatePhoneNumber" destination="BzP-1U-InX" eventType="editingChanged" id="dEr-qu-wf0"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-iH-uhk">
                                 <rect key="frame" x="16" y="85" width="116" height="21"/>
@@ -234,7 +237,7 @@
                                 <action selector="dismissModal:" destination="BzP-1U-InX" id="Buw-UZ-TQ2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MNI-Tx-g3O">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="MNI-Tx-g3O">
                             <connections>
                                 <action selector="saveContact:" destination="BzP-1U-InX" id="W1I-95-49P"/>
                             </connections>
@@ -245,6 +248,7 @@
                     <connections>
                         <outlet property="addToSelector" destination="u2x-Sq-9Wd" id="XIH-pk-Kjd"/>
                         <outlet property="phoneNumberField" destination="0pS-aI-yfC" id="eio-X1-H2e"/>
+                        <outlet property="saveButton" destination="MNI-Tx-g3O" id="gPI-eG-TMS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRF-a5-gtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
