@@ -64,6 +64,7 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
     
     func deviceDidStartListeningForIncomingConnections(device: TCDevice!) {
         showConnectedHUD()
+        println("deviceDidStartListeningForIncomingConnections")
     }
     
     func device(device: TCDevice!, didReceiveIncomingConnection connection: TCConnection!) {
@@ -77,9 +78,13 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
             let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
             connection.delegate = callModal
             callModal.numberCalling = caller
-            self.presentViewController(callModal, animated: true, completion: nil)
+            callModal.connection = connection
             connection.accept()
+            self.presentViewController(callModal, animated: true, completion: nil)
         }
+        alertController.addAction(cancel)
+        alertController.addAction(accept)
+        presentViewController(alertController, animated: true) { () in }
     }
     
     func device(device: TCDevice!, didReceivePresenceUpdate presenceEvent: TCPresenceEvent!) {
@@ -90,8 +95,6 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
         showConnectingHUD()
     }
     
-    
-    
     // MARK: - Twilio setup methods
     
     func getNewToken() {
@@ -101,6 +104,9 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
             if (body != nil) {
                 let token = body!
                 self.device = TCDevice(capabilityToken: token, delegate: self)
+                self.device?.incomingSoundEnabled = false
+                self.device?.outgoingSoundEnabled = false
+                self.device?.disconnectSoundEnabled = false
                 println("New TCDevice created from token")
             } else {
                 println("Got a nil body")
@@ -113,13 +119,12 @@ class PhoneViewController: UIViewController, ABPeoplePickerNavigationControllerD
     // MARK: - Call control methods
     
     func callNumber(number: String) {
-        let params = ["from": myNumber, "to": number]
-        manager.POST(outgoingEndpoint, parameters: params, success: { (operation, response) -> Void in
-            // TODO: Add behavior back in
-            println("Calling numbers is not yet implemented.")
-        }, failure: { (operation, error) -> Void in
-            println(error)
-        })
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
+        callModal.numberCalling = number
+        let connection = device?.connect(["PhoneNumber": number], delegate: callModal)
+        callModal.connection = connection
+        self.presentViewController(callModal, animated: true, completion: nil)
     }
 
 }
