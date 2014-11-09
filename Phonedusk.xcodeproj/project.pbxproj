@@ -11,13 +11,15 @@
 		369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D185D1A0E9E8400334F09 /* AppDelegate.swift */; };
 		369D18651A0E9E8400334F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369D18631A0E9E8400334F09 /* Main.storyboard */; };
 		369D18671A0E9E8400334F09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369D18661A0E9E8400334F09 /* Images.xcassets */; };
-		369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 369D18681A0E9E8400334F09 /* LaunchScreen.xib */; };
 		369D18801A0EA02900334F09 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D187F1A0EA02900334F09 /* PhoneViewController.swift */; };
 		369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D18811A0EA02F00334F09 /* SettingsViewController.swift */; };
 		369D18921A0EA34100334F09 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D188F1A0EA34100334F09 /* libcrypto.a */; };
 		369D18931A0EA34200334F09 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18901A0EA34100334F09 /* libssl.a */; };
 		369D18941A0EA34200334F09 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369D18911A0EA34100334F09 /* libTwilioClient.a */; };
 		36A320491A0FAEC6000979E8 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A320481A0FAEC6000979E8 /* CallViewController.swift */; };
+		36A476F71A0FBD820009177C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A476F61A0FBD820009177C /* LaunchScreen.storyboard */; };
+		36A476FA1A0FBFCC0009177C /* UILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A476F91A0FBFCC0009177C /* UILabel.m */; };
+		36A476FD1A0FC1310009177C /* OtherUITweaks.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A476FC1A0FC1310009177C /* OtherUITweaks.m */; };
 		36A491D51A0ECE7600C2942B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D31A0ECE7600C2942B /* AddressBook.framework */; };
 		36A491D61A0ECE7600C2942B /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D41A0ECE7600C2942B /* AddressBookUI.framework */; };
 		36A491DC1A0ECFE500C2942B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A491D81A0ECFE500C2942B /* AudioToolbox.framework */; };
@@ -97,7 +99,6 @@
 		369D185D1A0E9E8400334F09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369D18641A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		369D18661A0E9E8400334F09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		369D18691A0E9E8400334F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		369D187F1A0EA02900334F09 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		369D18811A0EA02F00334F09 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		369D18891A0EA32D00334F09 /* TCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
@@ -111,6 +112,11 @@
 		369D18911A0EA34100334F09 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
 		369D18971A0EA3B100334F09 /* Phonedusk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Phonedusk-Bridging-Header.h"; sourceTree = "<group>"; };
 		36A320481A0FAEC6000979E8 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		36A476F61A0FBD820009177C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36A476F81A0FBFCC0009177C /* UILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabel.h; sourceTree = "<group>"; };
+		36A476F91A0FBFCC0009177C /* UILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabel.m; sourceTree = "<group>"; };
+		36A476FB1A0FC1310009177C /* OtherUITweaks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherUITweaks.h; sourceTree = "<group>"; };
+		36A476FC1A0FC1310009177C /* OtherUITweaks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherUITweaks.m; sourceTree = "<group>"; };
 		36A491D31A0ECE7600C2942B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		36A491D41A0ECE7600C2942B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		36A491D81A0ECFE500C2942B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -288,7 +294,7 @@
 		369D18851A0EA04500334F09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				369D18681A0E9E8400334F09 /* LaunchScreen.xib */,
+				36A476F61A0FBD820009177C /* LaunchScreen.storyboard */,
 				369D18631A0E9E8400334F09 /* Main.storyboard */,
 			);
 			path = Views;
@@ -298,6 +304,10 @@
 			isa = PBXGroup;
 			children = (
 				36A4927C1A0F683300C2942B /* Contact.swift */,
+				36A476F81A0FBFCC0009177C /* UILabel.h */,
+				36A476F91A0FBFCC0009177C /* UILabel.m */,
+				36A476FB1A0FC1310009177C /* OtherUITweaks.h */,
+				36A476FC1A0FC1310009177C /* OtherUITweaks.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,10 +600,10 @@
 				36A491F11A0ED03000C2942B /* dtmf_0.wav in Resources */,
 				36A491F91A0ED03000C2942B /* dtmf_8.wav in Resources */,
 				36A491F41A0ED03000C2942B /* dtmf_3.wav in Resources */,
-				369D186A1A0E9E8400334F09 /* LaunchScreen.xib in Resources */,
 				36A491FB1A0ED03000C2942B /* dtmf_hash.wav in Resources */,
 				36A491F51A0ED03000C2942B /* dtmf_4.wav in Resources */,
 				369D18671A0E9E8400334F09 /* Images.xcassets in Resources */,
+				36A476F71A0FBD820009177C /* LaunchScreen.storyboard in Resources */,
 				36A491F61A0ED03000C2942B /* dtmf_5.wav in Resources */,
 				36A491F21A0ED03000C2942B /* dtmf_1.wav in Resources */,
 				36A491F31A0ED03000C2942B /* dtmf_2.wav in Resources */,
@@ -650,9 +660,11 @@
 				36A492511A0EFEFC00C2942B /* M13ProgressViewRing.m in Sources */,
 				36A492711A0F365800C2942B /* AFURLRequestSerialization.m in Sources */,
 				36A4926F1A0F365800C2942B /* AFSecurityPolicy.m in Sources */,
+				36A476FA1A0FBFCC0009177C /* UILabel.m in Sources */,
 				36A4926D1A0F365800C2942B /* AFHTTPSessionManager.m in Sources */,
 				36A492111A0ED81100C2942B /* APPhoneWithLabel.m in Sources */,
 				369D18821A0EA02F00334F09 /* SettingsViewController.swift in Sources */,
+				36A476FD1A0FC1310009177C /* OtherUITweaks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,14 +677,6 @@
 				369D18641A0E9E8400334F09 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		369D18681A0E9E8400334F09 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				369D18691A0E9E8400334F09 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

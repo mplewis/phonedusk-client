@@ -20,5 +20,6 @@
 #import "M13ProgressViewRing.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
+#import "OtherUITweaks.h"
 
 #endif

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t65-Lr-hoh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Kmk-qC-lBE">
+            <objects>
+                <viewController id="npg-ty-4Z6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s9v-eD-Tmz"/>
+                        <viewControllerLayoutGuide type="bottom" id="R57-ZL-NLD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h1P-21-xc2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon" translatesAutoresizingMaskIntoConstraints="NO" id="3mJ-1o-rBa">
+                                <rect key="frame" x="138" y="137" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="A2u-l2-ZZd"/>
+                                    <constraint firstAttribute="height" constant="325" id="HMV-PX-Uzi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3mJ-1o-rBa" secondAttribute="centerX" id="VB5-lB-jIF"/>
+                            <constraint firstAttribute="centerY" secondItem="3mJ-1o-rBa" secondAttribute="centerY" id="pm5-Pa-oLW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UF4-Po-SOl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8B3-Ly-KGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2166" y="279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Y3-DC-25K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufR-AE-JYn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="8O8-gI-5oS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cll-LN-EBT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="npg-ty-4Z6" kind="relationship" relationship="rootViewController" id="nQe-bC-apU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpF-Z9-cZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="279"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uv1-D4-Ic5">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="t65-Lr-hoh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Eef-RL-hwe">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ufR-AE-JYn" kind="relationship" relationship="viewControllers" id="emw-3w-L5N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kL0-zz-oaa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moon" width="341" height="341"/>
+    </resources>
+</document>

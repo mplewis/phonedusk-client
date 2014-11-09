@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager.requestSerializer = reqSerializer
         manager.responseSerializer = respSerializer
         
+        // Set up UI tweaks
+        OtherUITweaks.doTweaks();
+        
         return true
     }
     
