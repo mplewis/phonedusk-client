@@ -156,8 +156,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="ATw-UY-PTt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9ch-7c-SRz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9ch-7c-SRz">
+                            <connections>
+                                <action selector="saveSettings:" destination="8rJ-Kc-sve" id="MqB-z5-zAX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="privacyMode" destination="VbA-dI-iK9" id="98V-V7-uHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
