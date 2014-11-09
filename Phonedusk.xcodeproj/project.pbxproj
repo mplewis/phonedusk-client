@@ -73,6 +73,7 @@
 		36A492771A0F4D7700C2942B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492761A0F4D7700C2942B /* MBProgressHUD.m */; };
 		36A4927B1A0F4E5C00C2942B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */; };
 		36A4927D1A0F683300C2942B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927C1A0F683300C2942B /* Contact.swift */; };
+		36A4927F1A0F776400C2942B /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927E1A0F776400C2942B /* NewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -200,6 +201,7 @@
 		36A492761A0F4D7700C2942B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		36A4927C1A0F683300C2942B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		36A4927E1A0F776400C2942B /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */,
 				369D18811A0EA02F00334F09 /* SettingsViewController.swift */,
 				36A492551A0EFF7500C2942B /* CallViewController.swift */,
+				36A4927E1A0F776400C2942B /* NewContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */,
 				36A4924D1A0EFEFC00C2942B /* M13ProgressViewMetro.m in Sources */,
 				36A492491A0EFEFC00C2942B /* M13ProgressViewBorderedBar.m in Sources */,
+				36A4927F1A0F776400C2942B /* NewContactViewController.swift in Sources */,
 				36A4924E1A0EFEFC00C2942B /* M13ProgressViewMetroDotPolygon.m in Sources */,
 				36A492541A0EFEFC00C2942B /* M13ProgressViewStripedBar.m in Sources */,
 				36A492531A0EFEFC00C2942B /* M13ProgressViewSegmentedRing.m in Sources */,

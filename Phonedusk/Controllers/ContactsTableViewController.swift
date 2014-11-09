@@ -42,7 +42,9 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
     }
 
     func addContact() {
-        println("Adding contact")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newContactModal = storyboard.instantiateViewControllerWithIdentifier("NewContactNC") as UIViewController
+        self.presentViewController(newContactModal, animated: true, completion: nil)
     }
     
     override func setEditing(editing: Bool, animated: Bool) {
