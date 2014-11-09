@@ -72,6 +72,7 @@
 		36A492731A0F365800C2942B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A4926A1A0F365800C2942B /* AFURLSessionManager.m */; };
 		36A492771A0F4D7700C2942B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A492761A0F4D7700C2942B /* MBProgressHUD.m */; };
 		36A4927B1A0F4E5C00C2942B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */; };
+		36A4927D1A0F683300C2942B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4927C1A0F683300C2942B /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -198,6 +199,7 @@
 		36A492751A0F4D7700C2942B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		36A492761A0F4D7700C2942B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		36A4927A1A0F4E5C00C2942B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		36A4927C1A0F683300C2942B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		369D18861A0EA04700334F09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				36A4927C1A0F683300C2942B /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A4927D1A0F683300C2942B /* Contact.swift in Sources */,
 				36A492471A0EFEFC00C2942B /* M13ProgressView.m in Sources */,
 				36A4926E1A0F365800C2942B /* AFNetworkReachabilityManager.m in Sources */,
 				369D185E1A0E9E8400334F09 /* AppDelegate.swift in Sources */,
