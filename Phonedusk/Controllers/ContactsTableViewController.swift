@@ -67,10 +67,12 @@ class ContactsTableViewController: UITableViewController, UITableViewDataSource,
     }
     
     func commitChanges(#toAddWhite: [Contact], toAddBlack: [Contact], toDelWhite: [Contact], toDelBlack: [Contact]) {
-        println(toAddWhite)
-        println(toAddBlack)
-        println(toDelWhite)
-        println(toDelBlack)
+        let totalChanges = toAddBlack.count + toAddWhite.count + toDelBlack.count + toDelWhite.count
+        if (totalChanges > 0) {
+            println("Committing all changes")
+        } else {
+            println("No changes to commit")
+        }
     }
     
     // MARK: - UITableViewDataSource
