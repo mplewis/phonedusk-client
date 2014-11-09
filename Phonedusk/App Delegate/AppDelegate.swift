@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConne
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Set up manager and serializer to use HTTP Basic Auth
         reqSerializer.setAuthorizationHeaderFieldWithUsername(username, password: password)
-        respSerializer.acceptableContentTypes = NSSet(array: ["text/plain"])
+        respSerializer.acceptableContentTypes = NSSet(array: ["text/plain", "text/html"])
         manager.requestSerializer = reqSerializer
         manager.responseSerializer = respSerializer
         
@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConne
     func getNewToken() {
         println("Requesting new token...")
         manager.GET(tokenEndpoint, parameters: nil, success: { (operation, response) -> Void in
-            println(response)
             let body = NSString(data: response as NSData, encoding: NSUTF8StringEncoding)
             if (body != nil) {
                 let token = body!
@@ -60,9 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConne
             } else {
                 println("Got a nil body")
             }
-        }) { (operation, error) -> Void in
+        }, failure: { (operation, error) -> Void in
             println(error)
-        }
+        })
     }
     
     // MARK: - TCDeviceDelegate methods
@@ -113,7 +112,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TCDeviceDelegate, TCConne
     
     func callNumber(number: String) {
         hangUp()
-        device?.connect(["PhoneNumber": number], delegate: self)
+        let params = ["from": myNumber, "to": number]
+        manager.POST(outgoingEndpoint, parameters: params, success: { (operation, response) -> Void in
+            let body = NSString(data: response as NSData, encoding: NSUTF8StringEncoding)
+            if (body != nil) {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let callModal = storyboard.instantiateViewControllerWithIdentifier("CallViewController") as CallViewController
+                self.callInfoDelegate = callModal
+                callModal.numberCalling = number
+                let rootVC = self.window!.rootViewController!
+                rootVC.presentViewController(callModal, animated: true, completion: nil)
+            } else {
+                println("Got a nil body")
+            }
+        }, failure: { (operation, error) -> Void in
+                println(error)
+        })
     }
     
     func hangUp() {
